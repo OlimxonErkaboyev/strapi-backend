@@ -848,7 +848,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     path: Schema.Attribute.String & Schema.Attribute.Required;
     project_badge: Schema.Attribute.Relation<
-      'oneToMany',
+      'oneToOne',
       'api::badge-project.badge-project'
     >;
     publishedAt: Schema.Attribute.DateTime;
