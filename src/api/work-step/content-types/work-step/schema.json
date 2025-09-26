@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_steps",
+  "info": {
+    "singularName": "work-step",
+    "pluralName": "work-steps",
+    "displayName": "WorkStep"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "blocks",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

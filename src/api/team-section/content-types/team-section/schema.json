@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_sections",
+  "info": {
+    "singularName": "team-section",
+    "pluralName": "team-sections",
+    "displayName": "TeamSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "desc": {
+      "type": "text"
+    },
+    "count": {
+      "type": "integer",
+      "min": 1
+    },
+    "paragraph": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "mobile_sections",
+  "info": {
+    "singularName": "mobile-section",
+    "pluralName": "mobile-sections",
+    "displayName": "MobileSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "string",
+      "required": true
+    },
+    "paragraph": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

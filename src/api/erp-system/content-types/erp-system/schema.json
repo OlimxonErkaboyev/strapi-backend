@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "erp_systems",
+  "info": {
+    "singularName": "erp-system",
+    "pluralName": "erp-systems",
+    "displayName": "ERP_System"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "desc": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

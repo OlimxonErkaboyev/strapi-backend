@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "work_sections",
+  "info": {
+    "singularName": "work-section",
+    "pluralName": "work-sections",
+    "displayName": "WorkSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "work_steps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-step.work-step"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "optimization_sections",
+  "info": {
+    "singularName": "optimization-section",
+    "pluralName": "optimization-sections",
+    "displayName": "OptimizationSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "desc": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

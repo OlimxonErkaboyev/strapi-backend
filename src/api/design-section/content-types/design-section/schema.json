@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "design_sections",
+  "info": {
+    "singularName": "design-section",
+    "pluralName": "design-sections",
+    "displayName": "DesignSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "desc": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "paragraph": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

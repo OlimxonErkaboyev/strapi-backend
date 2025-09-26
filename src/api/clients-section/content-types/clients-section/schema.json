@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "clients_sections",
+  "info": {
+    "singularName": "clients-section",
+    "pluralName": "clients-sections",
+    "displayName": "ClientsSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "left_clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client"
+    },
+    "right_clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client"
+    }
+  }
+}
