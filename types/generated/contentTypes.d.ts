@@ -776,6 +776,8 @@ export interface ApiMobileSectionMobileSection extends Struct.SingleTypeSchema {
       'api::mobile-section.mobile-section'
     > &
       Schema.Attribute.Private;
+    mobile_apps: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
+    mobile_tools: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
     paragraph: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
