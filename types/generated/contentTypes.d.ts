@@ -453,7 +453,6 @@ export interface ApiBadgeProjectBadgeProject
       'api::badge-project.badge-project'
     > &
       Schema.Attribute.Private;
-    projects: Schema.Attribute.Relation<'manyToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -846,8 +845,8 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     path: Schema.Attribute.String & Schema.Attribute.Required;
-    project_badge_projects: Schema.Attribute.Relation<
-      'manyToMany',
+    project_badge: Schema.Attribute.Relation<
+      'oneToMany',
       'api::badge-project.badge-project'
     >;
     publishedAt: Schema.Attribute.DateTime;

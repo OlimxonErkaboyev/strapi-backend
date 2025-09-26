@@ -39,11 +39,10 @@
         "files"
       ]
     },
-    "project_badge_projects": {
+    "project_badge": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::badge-project.badge-project",
-      "mappedBy": "projects"
+      "relation": "oneToMany",
+      "target": "api::badge-project.badge-project"
     },
     "tools": {
       "type": "relation",

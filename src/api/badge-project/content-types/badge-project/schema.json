@@ -26,12 +26,6 @@
         "images",
         "files"
       ]
-    },
-    "projects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::project.project",
-      "inversedBy": "project_badge_projects"
     }
   }
 }
