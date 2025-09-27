@@ -968,6 +968,39 @@ export interface ApiToolTool extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiToolsSectionToolsSection extends Struct.SingleTypeSchema {
+  collectionName: 'tools_sections';
+  info: {
+    displayName: 'ToolsSection';
+    pluralName: 'tools-sections';
+    singularName: 'tools-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    categories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tools-section.tools-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    tools: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWorkSectionWorkSection extends Struct.SingleTypeSchema {
   collectionName: 'work_sections';
   info: {
@@ -1557,6 +1590,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::team-section.team-section': ApiTeamSectionTeamSection;
       'api::tool.tool': ApiToolTool;
+      'api::tools-section.tools-section': ApiToolsSectionToolsSection;
       'api::work-section.work-section': ApiWorkSectionWorkSection;
       'api::work-step.work-step': ApiWorkStepWorkStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;

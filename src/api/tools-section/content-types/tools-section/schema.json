@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "tools_sections",
+  "info": {
+    "singularName": "tools-section",
+    "pluralName": "tools-sections",
+    "displayName": "ToolsSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}
