@@ -29,6 +29,11 @@
         "videos",
         "audios"
       ]
+    },
+    "contulting_tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
     }
   }
 }

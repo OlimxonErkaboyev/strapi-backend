@@ -567,6 +567,7 @@ export interface ApiConsultingSectionConsultingSection
     draftAndPublish: true;
   };
   attributes: {
+    contulting_tools: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -814,6 +815,10 @@ export interface ApiOptimizationSectionOptimizationSection
       'api::optimization-section.optimization-section'
     > &
       Schema.Attribute.Private;
+    optimization_tools: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tool.tool'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &

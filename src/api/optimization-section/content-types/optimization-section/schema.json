@@ -30,6 +30,11 @@
     "desc": {
       "type": "text",
       "required": true
+    },
+    "optimization_tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
     }
   }
 }
