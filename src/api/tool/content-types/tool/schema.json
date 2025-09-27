@@ -24,6 +24,10 @@
         "images",
         "files"
       ]
+    },
+    "category": {
+      "type": "string",
+      "required": false
     }
   }
 }
