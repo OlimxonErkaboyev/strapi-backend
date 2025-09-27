@@ -671,6 +671,8 @@ export interface ApiDesignSectionDesignSection extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     desc: Schema.Attribute.Text & Schema.Attribute.Required;
+    design_apps: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
+    design_tools: Schema.Attribute.Relation<'oneToMany', 'api::tool.tool'>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

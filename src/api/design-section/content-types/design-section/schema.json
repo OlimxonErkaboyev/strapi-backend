@@ -34,6 +34,16 @@
     "paragraph": {
       "type": "string",
       "required": false
+    },
+    "design_tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
+    },
+    "design_apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
     }
   }
 }
